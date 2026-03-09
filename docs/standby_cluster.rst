@@ -83,8 +83,8 @@ standby cluster.
 
 
 .. warning::
-       Member names (the ``name`` field in each node's Patroni configuration) must
-   be unique across the primary cluster and all standby clusters connected to it.
+       Member names (the ``name`` field in each node's Patroni configuration) must 
+       be unique across the primary cluster and all standby clusters connected to it.
 
    Patroni sets ``synchronous_standby_names`` on the primary using member names,
    which also become the ``application_name`` of each replication connection in
