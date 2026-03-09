@@ -81,6 +81,7 @@ need to define a single host in the ``standby_cluster.host`` section. However,
 you need to beware that in this case ``pg_rewind`` will fail to execute on the
 standby cluster.
 
+
 .. warning::
        Member names (the ``name`` field in each node's Patroni configuration) must
    be unique across the primary cluster and all standby clusters connected to it.
