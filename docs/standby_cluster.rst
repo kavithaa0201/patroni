@@ -93,9 +93,8 @@ standby cluster.
    primary cluster member, PostgreSQL will see two connections with identical
    ``application_name`` values. This ambiguity can cause PostgreSQL to satisfy
    the synchronous replication requirement using the standby cluster's connection
-   (which has ``sync_state = potential``) instead of the intended primary cluster
-   member (``sync_state = sync``), leading PostgreSQL to prematurely acknowledge
-   transactions as synchronously committed when they are not durable on the
+   instead of the intended primary cluster member, leading PostgreSQL to prematurely 
+   acknowledge transactions as synchronously committed when they are not durable on the
    correct standby.
 
    This is a silent failure — replication continues and no errors are logged, but
